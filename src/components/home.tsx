@@ -1,10 +1,9 @@
 "use client"
 
-import Image from "next/image";
 import React from "react";
 import styles from "./style.module.css";
 import { AnimatedText } from "@/components/text";
-import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 type Props = {
   text: string;
@@ -14,10 +13,6 @@ type Props = {
 
 export const Home = ({ text, description, connectBtn }: Props) => {
   const company = text;
-  const router = useRouter();
-  const handleScrollToBottom = () => {
-    router.push("/contact");
-  };
 
   return (
     <div className="relative flex flex-col justify-center items-center gap-4 w-screen h-screen text-center">
@@ -28,7 +23,7 @@ export const Home = ({ text, description, connectBtn }: Props) => {
         ))}
       </div>
       {connectBtn && (
-        <div onClick={handleScrollToBottom} className="flex items-center gap-2 bg-white mt-4 px-3 py-2 rounded-md transition-all duration-500 cursor-pointer ease-in-out group">
+        <a href="https://cal.com/saunak/30min" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white mt-4 px-3 py-2 rounded-md transition-all duration-500 cursor-pointer ease-in-out group">
           <div className="relative">
             <Image
               src="/icons/add.svg"
@@ -49,9 +44,9 @@ export const Home = ({ text, description, connectBtn }: Props) => {
             />
           </div>
           <h1 className="group-hover:ml-8 font-medium text-black text-sm transition-all duration-500 ease-in-out">
-            Book a 15-min call
+            Book a 30-min call
           </h1>
-        </div>
+        </a>
       )}
       {connectBtn && (
         <div className="flex justify-center items-center gap-2">

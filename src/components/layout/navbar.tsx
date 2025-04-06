@@ -62,7 +62,9 @@ export const Navbar = () => {
         </AnimatePresence>
       }
       <nav className="top-0 left-0 z-[99] fixed flex justify-between items-center p-6 md:p-10 w-full">
-        <Image src="/icons/logo.png" alt="logo" width={56} height={50} />
+        <Link href="/" className="cursor-pointer">
+          <Image src="/icons/logo.png" alt="logo" width={56} height={50} />
+        </Link>
         <div className="flex items-center gap-4">
           <h1 className="text-base text-white">Menu</h1>
           <button onClick={() => setIsOpen(!isOpen)} className={styles.button}>

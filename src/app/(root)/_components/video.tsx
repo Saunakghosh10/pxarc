@@ -32,7 +32,7 @@ export const Video = () => {
           >
             <video
               className="absolute inset-0 w-full h-full object-cover"
-              src="/videos/about.mp4"
+              src="/videos/web.mp4"
               autoPlay
               loop
               muted
